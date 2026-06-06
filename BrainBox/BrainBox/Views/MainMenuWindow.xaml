@@ -1,12 +1,19 @@
 ﻿<Window x:Class="BrainBox.Views.MainMenuWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BrainBox.Views"
-        mc:Ignorable="d"
-        Title="MainMenuWindow" Height="450" Width="800">
+        Title="BrainBox" Height="500" Width="840"
+        WindowStartupLocation="CenterScreen"
+        Background="#1E1E2E">
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <TextBlock Text="BrainBox" FontSize="42" Foreground="White"
+                       HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            <TextBlock x:Name="txtPlayerName" FontSize="16" Foreground="#888888"
+                       HorizontalAlignment="Center" Margin="0,0,0,30"/>
+            <Button Content="Start" Height="50" Margin="0,5" FontSize="18"
+                    Background="#4CAF50" Foreground="White" Click="StartGame"/>
+            <Button Content="Статистика" Height="45" Margin="0,5" FontSize="14"
+                    Background="#2196F3" Foreground="White" Click="OpenStats"/>
+        </StackPanel>
     </Grid>
 </Window>
