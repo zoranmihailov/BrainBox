@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrainBox.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace BrainBox.Views
     /// </summary>
     public partial class CombinationWindow : Window
     {
-        public CombinationWindow()
+        private PlayerProfile _profile;
+        public CombinationWindow(PlayerProfile profile)
         {
             InitializeComponent();
+            _profile = profile;
         }
     }
 }
