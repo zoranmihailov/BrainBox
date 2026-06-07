@@ -29,7 +29,7 @@ namespace BrainBox.Views
         private int _attemptsLeft = 6;
         private int _score = 0;
         private DispatcherTimer _timer;
-        private int _timeLeft = 45;
+        private int _timeLeft = 60;
 
         public CombinationWindow(PlayerProfile profile)
         {

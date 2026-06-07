@@ -10,10 +10,14 @@
 
   <ItemGroup>
     <None Remove="Data\quiz.json" />
+    <None Remove="Data\words.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Data\quiz.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\words.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

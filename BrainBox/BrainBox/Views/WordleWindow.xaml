@@ -1,12 +1,37 @@
 ﻿<Window x:Class="BrainBox.Views.WordleWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BrainBox.Views"
-        mc:Ignorable="d"
-        Title="WordleWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Wordle" Height="700" Width="840"
+        WindowStartupLocation="CenterScreen"
+        Background="#1E1E2E"
+        KeyDown="Window_KeyDown"
+        Focusable="True">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Gore: naslov i tajmer -->
+        <Grid Grid.Row="0" Margin="0,0,0,15">
+            <TextBlock Text="Wordle" Foreground="White" FontSize="28"
+                       FontWeight="Bold" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="txtTimer" Foreground="#FF5555" FontSize="24"
+                       FontWeight="Bold" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <!-- Obidi: 6 redovi x 10 bukvi -->
+        <StackPanel x:Name="gridPanel" Grid.Row="1" HorizontalAlignment="Center"/>
+
+        <!-- Tastatura -->
+        <StackPanel x:Name="keyboardPanel" Grid.Row="2" 
+            HorizontalAlignment="Center" 
+            Margin="0,10,0,0"/>
+
+        <!-- Poeni -->
+        <TextBlock x:Name="txtScore" Grid.Row="3" Foreground="#4CAF50" FontSize="16"
+                   HorizontalAlignment="Center" Margin="0,10,0,0"/>
     </Grid>
 </Window>
